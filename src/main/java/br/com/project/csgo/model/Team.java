@@ -4,6 +4,9 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 @Entity
 @Data
@@ -24,5 +27,9 @@ public class Team implements Serializable {
 
     @Column(name = "tx_continent")
     private String txContinent;
+
+    @Column(name = "dt_create")
+    private LocalDateTime dtCreate = LocalDateTime.now();
+
 
 }
